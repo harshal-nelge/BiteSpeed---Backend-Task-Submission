@@ -11,6 +11,11 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(title="Bitespeed Identity Reconciliation")
 
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
+
 @app.post("/identify", response_model=IdentifyResponse)
 def identify(payload: IdentifyRequest, db: Session = Depends(get_db)):
     if not payload.email and not payload.phoneNumber:
