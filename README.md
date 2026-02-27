@@ -1,6 +1,7 @@
 # Bitespeed Identity Reconciliation
 
 POST `/identify` endpoint that links contacts across multiple purchases using email/phone.
+https://bitespeed-submission.harshal.engineer/identify
 
 ## Stack
 - FastAPI + SQLite + SQLAlchemy + Pydantic
@@ -15,6 +16,7 @@ uvicorn main:app --reload
 ```
 
 ## Deploy on Render
+https://bitespeed-submission.harshal.engineer/docs
 
 ## Endpoint
 
